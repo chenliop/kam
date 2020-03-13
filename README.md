@@ -1,10 +1,13 @@
-win setup
 
-ubuntu setup
+For Dev
 
-docker setup
+git clone https://github.com/Python35/kam.git
 
+Docker Setup
+docker-compose up
 
-demo
-
-PROJECT=weatherProject docker build -t objpartner/$PROJECT --build-arg PROJECT=$PROJECT -f Dockerfile.demo
+Create Demo Image with loaded data, code and installed packages
+Change TAG to name of demo
+docker build -t objectivepartner/weatherproject:TAG -f Dockerfile.demo .
+docker login -u objectivepartner docker.io
+docker push objectivepartner/weatherproject:TAG

@@ -1,8 +1,8 @@
-ARG BASE_CONTAINER=jupyter/scipy-notebook
+ARG BASE_CONTAINER=jupyter/tensorflow-notebook
 FROM $BASE_CONTAINER
 
 LABEL maintainer="objective partner AG - KAM Community"
-COPY ./$PROJECT /home/$NB_USER/work
+COPY ./weatherproject /home/$NB_USER/work
 
 WORKDIR /home/$NB_USER/work
 
@@ -10,6 +10,3 @@ WORKDIR /home/$NB_USER/work
 RUN pip install --quiet -r requirements.txt
 
 USER root
-
-RUN fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
