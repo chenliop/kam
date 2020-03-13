@@ -47,6 +47,10 @@ Create Demo Image with loaded data, code and installed packages
 2. docker login -u objectivepartner docker.io
 3. docker push objectivepartner/weatherproject:TAG
 
+## Use Demo Image
+
+docker run -p 8888:8888 objectivepartner/weatherproject:TAG
+
 ## Install new Packages
 **Requirements**
 * Dev Setup
