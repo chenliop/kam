@@ -52,7 +52,9 @@ Create Demo Image with loaded data, code and installed packages
 * Dev Setup
  
 1. docker exec -it kam_jupyter_1 pip install -r requirements.txt
+
 or
+
 1. Add Packages to requirements.txt
 2. Open new Jupyter Terminal 
 3. pip install -r requirements.txt
