@@ -1,0 +1,10 @@
+version: '3'
+services:
+  jupyter:
+    image: objpartner/weatherproject
+    ports:
+    - "8888:8888"
+    volumes:
+    - ./weatherproject:/home/jovyan/work
+volumes:
+    weatherproject:

@@ -1,0 +1,15 @@
+ARG BASE_CONTAINER=jupyter/scipy-notebook
+FROM $BASE_CONTAINER
+
+LABEL maintainer="objective partner AG - KAM Community"
+COPY ./$PROJECT /home/$NB_USER/work
+
+WORKDIR /home/$NB_USER/work
+
+# Install Tensorflow
+RUN pip install --quiet -r requirements.txt
+
+USER root
+
+RUN fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
